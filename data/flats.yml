@@ -1,0 +1,42 @@
+cecile:
+  name: "Cecile's home"
+  description: "Charming room in Shanghai"
+  city_name: "Shanghai, China"
+  city_slug: "shanghai"
+  wifi: false
+  rating: 4
+thomasfgo:
+  name: "Gab' home"
+  description: Small flat in Berlin
+  city_name: "Berlin, Germany"
+  city_slug: "berlin"
+  wifi: true
+  rating: 3
+monsieurpaillard:
+  name: Jad's home
+  description: Nice flat in Rio
+  city_name: "Rio, Brazil"
+  city_slug: "rio"
+  wifi: true
+  rating: 5
+volpeo:
+  name: "Jean's home"
+  description: "Charming room in London"
+  city_name: "London, UK"
+  city_slug: "london"
+  wifi: false
+  rating: 4
+sybillecrd:
+  name: "Michel's home"
+  description: Small flat in Barcelone
+  city_name: "Barcelone, Spain"
+  city_slug: "barcelone"
+  wifi: true
+  rating: 3
+ssaunier:
+  name: Marie's home
+  description: Nice flat in Paris
+  city_name: "Paris, France"
+  city_slug: "paris"
+  wifi: true
+  rating: 5

@@ -6,64 +6,49 @@ title: Le Wagon - Middleman
   <div class="banner-content">
     <h1>Welcome home !</h1>
     <p>Book unique homes and experience a city like a local</p>
-      <form>
-        <div class="form-row">
+      <form class="form-inline">
+        <div class="form-group">
           <div class="col-xs-6">
             <input type="text" class="form-control" placeholder="Where?">
           </div>
+        </div>
+
+        <div class="form-group">
           <div class="col-xs-6">
             <input type="text" class="form-control" placeholder="When?">
           </div>
-          <select class="form-control">
+        </div>
+
+        <div class="form-group">
+          <select class="form-control" class="col-xs-6">
             <option>1 guest</option>
             <option>2 guest</option>
             <option>3 guest</option>
           </select>
-          <a class="btn btn-primary">Search</a>
         </div>
+          <a class="btn btn-primary">Search</a>
       </form>
-  </div>
+    </div>
 </div>
 
-<div class="container">
+
+<div class="container" id="home-flats">
   <h2 class="text-center">Recent flats</h2>
   <div class="row">
-    <div class="col-xs-12 col-sm-4">
-      <div class="card" style="background-image: url('images/images/shanghai.jpg');">
-        <div class="card-category">SHANGHAI</div>
-        <img class="card-user" src="images/cecile.png" alt="">
-        <div class="card-description">
-          <h3>Cecile's Home</h3>
-          <p>Nice flat in Shanghai</p>
+    <% data.flats.each do |owner, flat| %>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="card" style="background-image: linear-gradient(-225deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 100%), url('https://kitt.lewagon.com/placeholder/cities/<%= flat.city_slug %>');">
+          <div class="card-category"><%= flat.city_name %></div>
+          <div class="card-description">
+            <h3><%= flat.name %></h3>
+            <p><%= flat.description %></p>
+          </div>
+          <%= image_tag "https://kitt.lewagon.com/placeholder/users/#{owner}", class:"card-user" %>
+          <%= link_to "", "flats/#{owner}.html", class: "card-link" %>
         </div>
-       <%= link_to "Cecile's flat", "#", class: "card-link" %>
       </div>
-    </div>
-
-    <div class="col-xs-12 col-sm-4">
-      <div class="card" style="background-image: url('images/images/berlin.jpg');">
-        <div class="card-category">BERLIN</div>
-        <%= image_tag "gab.png", class: "card-user" %>
-        <div class="card-description">
-          <h3>Gab's Home</h3>
-          <p>Nice flat in Berlin</p>
-        </div>
-        <%= link_to "Gab's flat", "#", class: "card-link" %>
-      </div>
-    </div>
-
-    <div class="col-xs-12 col-sm-4">
-      <div class="card" style="background-image: url('images/images/rio.jpg');">
-        <div class="card-category">Rio</div>
-        <%= image_tag "jad.png", class: "card-user" %>
-        <div class="card-description">
-          <h3>Jad's Home</h3>
-          <p>Nice flat in Rio</p>
-        </div>
-        <%= link_to "Jad's flat", "#", class: "card-link" %>
-      </div>
-    </div>
-
+    <% end %>
   </div>
 </div>
+
 

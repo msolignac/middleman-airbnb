@@ -1,12 +1,17 @@
 .footer {
-  background: #F4F4F4;
+  background-color: $light-gray;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 100px;
+  height: 70px;
   padding: 0px 50px;
   margin-top: 20px;
   color: rgba(0,0,0,0.3);
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
 }
 .footer-links {
   display: flex;
